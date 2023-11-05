@@ -1,6 +1,9 @@
 let magicToReset = 50000;
 
-const sleep = ms => new Promise(r => setTimeout(r, ms));
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 breakCycle = false;
 window.confirm = function () {
     return true;
