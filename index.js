@@ -1,4 +1,4 @@
-let magicToReset = 50000;
+let magicToReset = 50000000;
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
