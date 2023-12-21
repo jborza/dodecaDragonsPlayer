@@ -1,6 +1,6 @@
 breakCycle = false;
 
-let breakOnCygilSigns = 10;
+let breakOnCygilSigns = 4200;
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -14,10 +14,10 @@ async function loop() {
     while (!breakCycle) {
         darkMagicUpgradeBuyMax();
         magicUpgradeBuyMax();
-        cyanSigilsToGet = Number(document.getElementById("blueSigilsToGet").text);
+        cyanSigilsToGet = Number(document.getElementById("cyanSigilsToGet").text.replace(",", ""));
         if (cyanSigilsToGet >= breakOnCygilSigns) {
-            sigilCheck(2);
-            for (let i = 0; i < 4; i++)
+            sigilCheck(1);
+            for (let i = 0; i < 6; i++)
                 dragonFeed();
         }
         await sleep(1000);
