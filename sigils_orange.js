@@ -11,10 +11,10 @@ async function loop() {
         //"nextRedSigil" "nextOrangeSigil" "nextYellowSigil"
         var textArea = "nextOrangeSigil";
         var text = document.getElementById(textArea).text;
-        if (text <= "e1.00e23") {
-            await sleep(100);
-            continue;
-        }
+        // if (text <= "e1.00e23") {
+        //     await sleep(100);
+        //     continue;
+        // }
         await sleep(50);
         sigilCheck(7); //6 7 8
         await sleep(100);
